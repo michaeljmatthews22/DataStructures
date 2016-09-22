@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data_Structure_Group_Console
+namespace DataStructures
 {
     class Program
     {
@@ -29,46 +29,51 @@ namespace Data_Structure_Group_Console
                 while (bReturnToMain)
                 {
                     if (iMainMenu == 1)
+                    #region Stack 
                     {
                         /////////ENTER CODE FOR MENU OF A STACK
-                        Console.WriteLine("\n\n-------STACK MENU-------");
-                        Console.WriteLine("1. Add one time to Stack");
-                        Console.WriteLine("2. Add Huge List of Items to Stack");
-                        Console.WriteLine("3. Display Stack");
-                        Console.WriteLine("4. Delete from Stack");
-                        Console.WriteLine("5. Clear Stack");
-                        Console.WriteLine("6. Search Stack");
-                        Console.WriteLine("7. Return to Main Menu");
-                        Console.Write("Menu Selector: ");
+                        manageStack.menuDisplay();
+
                         iStackMenu = Convert.ToInt16(Console.ReadLine());
-                        if (iStackMenu == 1)
+
+                        switch (iStackMenu)
                         {
-                        }
-                        else if (iStackMenu == 2)
-                        {
-                        }
-                        else if (iStackMenu == 3)
-                        {
-                        }
-                        else if (iStackMenu == 4)
-                        {
-                        }
-                        else if (iStackMenu == 5)
-                        {
-                        }
-                        else if (iStackMenu == 6)
-                        {
-                        }
-                        else if (iStackMenu == 7)
-                        {
-                            bReturnToMain = false;
-                            Console.WriteLine("\n");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Please enter a valid menu option");
+                            case 1:
+                                manageStack.addOne();
+                                break;
+
+                            case 2:
+                                manageStack.addList();
+                                break;
+
+                            case 3:
+                                manageStack.display();
+                                break;
+
+                            case 4:
+                                manageStack.delete();
+                                break;
+
+                            case 5:
+                                manageStack.clear();
+                                break;
+
+                            case 6:
+                                manageStack.search();
+                                break;
+
+                            case 7:
+                                bReturnToMain = false;
+                                Console.WriteLine("\n");
+                                break;
+
+                            default:
+                                Console.WriteLine("Please enter a valid menu option");
+                                break;
                         }
                     }
+                    #endregion
+
                     else if (iMainMenu == 2)
                     {
                         /////////ENTER CODE FOR MENU OF A QUEUE
