@@ -1,4 +1,19 @@
-﻿using System;
+﻿/*
+ * 
+ * 
+ * The menu for encrypting data can be found below. This will prompt the user for the information
+ * that they want to encrypt. 
+ * 
+ * Information can be found int eh ProtectedData Class as well regarding the encryption
+ * 
+ * jThis wil write to a file
+ * 
+ * 
+ * 
+ * 
+ * */
+ 
+ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

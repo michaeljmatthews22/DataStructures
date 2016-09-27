@@ -1,6 +1,11 @@
 ﻿using System;
 
-
+/// <summary>
+/// This class is meant to handle all erros. This is what we need when we are taking input from 
+/// a string, especially if it is an int. 
+/// 
+/// you can call this class from anywhere in the program
+/// </summary>
 namespace DataStructures
 {
     class ErrorHandling
@@ -10,7 +15,7 @@ namespace DataStructures
         {
             do //DO UNTIL LOOP RETURNS A DESIRED VALUE
             {
-                int min = 0; //YOU HAVE TO HAVE AT LEAST TWO TEAMS TO PLAY A GAME
+                int min = 0; //YOU HAVE TO have at least one
                 
                 string input = Console.ReadLine(); //GET INPUT
                 try //HANDLE INVALID INPUTS
@@ -44,6 +49,7 @@ namespace DataStructures
             } while (true);
         }
        
+        //this is the main part of the clearing the input so that the user doesn't have to reenter bad data
         public void clearInput(string input, string prompt)
         {
             Console.CursorTop--; //MOVE CURSOR UP ONE

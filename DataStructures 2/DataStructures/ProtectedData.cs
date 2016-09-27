@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Security.Cryptography;
-  
+ /*
+  * 
+  * This code is meant to encrypt all of the data. This is public code.
+  * 
+  * This will take ht eoptions that the user is trying to bass and write it to a file
+  * 
+  * */
 public static class Encrypt
 {
 
     
-
+    //Converitng something into a byte
 	public static byte [] Protect( byte [] data )
 	{
 		try
@@ -24,6 +30,7 @@ public static class Encrypt
 		}
 	}
 
+    //Unprotecting the code
 	public static byte [] Unprotect( byte [] data )
 	{
 		try
@@ -40,6 +47,7 @@ public static class Encrypt
 		}
 	}
 
+    //printing the values so that the user can see
 	public static void PrintValues( Byte[] myArr )  
 	{
 	      foreach ( Byte i in myArr )  

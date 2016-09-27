@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+ * This code contains the information regarding what is a Stack, a Queue and also a Dictionary.
+ * 
+ * The information can be found on Microsoft's website and is descriptive of the types of information that they will be using. 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * */
+ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +21,10 @@ namespace DataStructures
     class ManPages
     {
 
+        //giving access to jPAges
         public static void accessPages()
         {
-            
+            //information regarding the queue data structures
             string queueMan =
                 "This class implements a queue as a circular array. Objects stored in a Queue are inserted at one end and removed from the other." +
 "Queues and stacks are useful when you need temporary storage for information; " +
@@ -34,6 +47,7 @@ namespace DataStructures
             "always increase in capacity by four when a greater capacity is required." +
 "Queue accepts null as a valid value and allows duplicate elements.";
 
+            //information regarding the stack
             string stackMan =
                 "For the generic version of this collection, see System.Collections.Generic.Stack<T>." +
 "The capacity of a Stack is the number of elements the Stack can hold. As elements are added to a Stack, " +
@@ -43,6 +57,7 @@ namespace DataStructures
  "Pop is an O(1) operation." +
 "Stack accepts null as a valid value and allows duplicate elements.";
 
+            //information the dictionary
             string dictionaryMan =
        "The Dictionary<TKey, TValue> generic class provides a mapping from a set of" +
     "keys to a set of values. Each addition to the dictionary consists of a value " +
@@ -77,6 +92,8 @@ namespace DataStructures
             "the type of the value. Instead, the element type is a KeyValuePair<TKey, TValue> of " +
            " the key type and the value type.";
 
+
+            //giving the menu
             Console.Write("\n");
             Console.WriteLine("-------MAN PAGES MENU-------");
             Console.WriteLine("1.    Stack Page");
@@ -90,6 +107,8 @@ namespace DataStructures
 
             int iManMenu = check.Input("Menu Selector: ", 4);
 
+
+            //all of the different optionns they can choose from
             switch (iManMenu)
             {
                 case 1:

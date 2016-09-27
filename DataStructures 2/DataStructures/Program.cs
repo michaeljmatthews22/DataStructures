@@ -6,7 +6,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Authors: Ben N, Alex Z, Michael M, Jeremy C
 
+
+Description: Write a program in C# using a console application that demonstrates the use of a Stack, Queue, and Dictionary (Map). I want you to start trying to use GitHub for this assignment.
+
+Make sure you document your code. This might seem like a big program but it really isn't since a lot of the code is copied and reused. In fact, it might be a good idea as a group to divide up the work and then try to bring it all together into one project.
+
+When completed, everyone needs to zip the project and upload to Learning Suite and make sure code is committed to GitHub.
+
+As a group, schedule a time with the TAs for grading
+
+
+add one item to ... - prompts the user to enter a string and then inserts the input into the data structure.
+
+Add Huge List of Items to ... – first clears the data structure and then generate 2,000 items in the data structure with the value of “New Entry” concatenated with the number. For example, New Entry 1, New Entry 2, New Entry 3. For the dictionary, the key will be the generated string ("New Entry 2") and the value will be the current number (2).
+
+Display ... - display the contents of the data structure. You must use the foreach loop when displaying the data. Handle any errors and inform the user.
+
+Delete from ... - prompt for which item to delete from the structure. Handle any errors and inform the user.
+
+Clear ... - wipe out the contents of the data structure
+
+Search ... - Search for an item in the data structure and return if it was found or not found and how long it took to search. You can create a StopWatch object using code like so:
+
+*/
 namespace DataStructures
 {
     class Program
@@ -36,11 +61,14 @@ namespace DataStructures
                 iMainMenu = check.Input("Menu Selector: ", 4);
 
                 switch (iMainMenu)
+                    //goign through eachd of the case scenarios that we need to check
                 {
                     case 1:
                         manageStack.menuDisplay();
 
                         ErrorHandling checking = new ErrorHandling();
+
+                        //checcking the information
 
                         int iStackMenu = checking.Input("Menu Selector: ", 7);
 
@@ -57,6 +85,8 @@ namespace DataStructures
                             case 3:
                                 manageStack.display();
                                 break;
+
+
 
                             case 4:
                                 manageStack.delete();
@@ -183,21 +213,3 @@ namespace DataStructures
 //Encrypt.PrintValues(originalData);
 
 
-/*
- * // Data to protect. Convert a string to a byte[] using Encoding.UTF8.GetBytes().
-byte[] plaintext;
-plaintext = Encoding.UTF8.GetBytes("this");
-
-// Generate additional entropy (will be used as the Initialization vector)
-byte[] entropy = new byte[20];
-using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
-{
-    rng.GetBytes(entropy);
-}
-
-            
-
-byte[] ciphertext = ProtectedData.Protect(plaintext, entropy,
-    DataProtectionScope.CurrentUser);
-
-Console.Write(ciphertext);*/
